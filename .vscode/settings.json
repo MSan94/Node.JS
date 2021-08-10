@@ -1,0 +1,7 @@
+// vs코드가 보는 로컬 셋팅
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+  }

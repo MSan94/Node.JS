@@ -1,0 +1,23 @@
+{
+  "name": "Node.JS",
+  "version": "1.0.0",
+  "description": "노드js스터디이이이",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MSan94/Node.JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MSan94/Node.JS/issues"
+  },
+  "homepage": "https://github.com/MSan94/Node.JS#readme",
+  "devDependencies": {
+    "prettier": "^2.3.2"
+  }
+}
