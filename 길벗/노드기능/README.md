@@ -6,3 +6,28 @@
 - 모듈이란 -> 특정한 기능을 하는 함수나 변수들의 집합
 - 모듈로 만들어두면 여러 프로그램에 해당 모듈을 재사용할 수 있다.
 
+- var.js
+```
+const odd = '홀수입니다.';
+const even = '짝수입니다.';
+
+module.exports = {
+    odd,
+    even,
+};
+```
+- func.js
+```
+const { odd, even } = require('./var')
+
+function checkOddOrEven(num){
+    if(num % 2) {
+        return odd;
+    }
+    return even
+}
+
+module.exports = checkOddOrEven
+
+console.log(checkOddOrEven(9))
+```
