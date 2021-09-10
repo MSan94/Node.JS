@@ -60,4 +60,52 @@ console.log(A())
 - console.trace(레이블) : 에러가 어디서 발생했는지 추적 가능
 
 ## 타이머
-- 
+- setTimeout(콜백함수 , 밀리초) : 주어진 밀리초(1000분의 1초) 이후에 콜백 함수를 실행
+- setInterval(콜백함수 , 밀리초) : 주어진 밀리초마다 콜백함수를 반복 실행
+- setImmediate(콜백함수) : 콜백함수 즉시 실행
+- clearTimeout(아이디) : setTimeout 취소
+- clearInterval(아이디)
+- clearImmediate(아이디) 
+- timer.js
+```
+const timeout = setTimeout(() => {
+    console.log("1.5초 후 실행");
+}, 1500);
+
+const interval = setInterval(() => {
+    console.log("1초마다 실행");
+}, 1000);
+
+const timeout2 = setTimeout(() => {
+    console.log("실행되지 않습니다.");
+}, 3000);
+
+setTimeout(() => {
+    clearTimeout(timeout2)
+    clearInterval(interval)
+}, 2500);
+
+const immediate = setImmediate(() => {
+    console.log("즉시 실행");
+});
+
+const immediate2 = setImmediate(() => {
+    console.log("실행되지 않습니다.");
+});
+
+clearImmediate(immediate2)
+```
+
+# __filename, __dirname
+- 경로에 대한 정보 제공
+
+# module, exports, require
+- module 객체 말고 exports 객체로도 모듈을 만들 수 있다.
+- module.export와 exports는 같은 객체를 참조
+- module.exports에는 어떤 값이든 대입가능하지만, exports에는 반드시 객체러럼 속성명과 속성값을 대입해야한다.
+- exports에 다른 값을 대입하면 객체의 참조 관계가 끊겨 더 이상 모듈로 기능하지 않는다.
+- exports를 사용시 객체만 사용할 수 있으므로, module.exports에 함수를 대입한 경우 exports로 바꿀수 없다
+```
+exports.odd = ""
+exports.even = ""
+```
