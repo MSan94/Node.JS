@@ -109,3 +109,29 @@ clearImmediate(immediate2)
 exports.odd = ""
 exports.even = ""
 ```
+
+# process
+- process 객체는 현재 실행되고 있는 노드 프로세스에 대한 정보를 담고 있다.
+- process.env
+    - 시스템의 환경변수를 알 수 있다.   
+    - process.env는 서비스의 중요한 키를 저장하는 공간으로 사용횐다.
+    - 서버나 db의 비밀번호와 각종 API 키를 코드에 직접 입력하는 것은 위험하기 때문에 PROCESS.ENV의 속성으로 대체
+    ```
+    const secretId = process.env.SECRET_ID;
+    const secretCode = process.env.SECRET_CODE;
+    ```
+- process.nextTick(콜백)
+    - 이벤트 루프가 다른 콜백 함수들보다 nextTick의 콜백 함수를 우선으로 처리하도록 만든다.
+    ```
+    process.nextTick( () => {
+        console.log("nextTick");
+    }
+    ```
+- process.exit(코드)
+    - 실행 중인 노드 프로세스를 종료
+    - 서버환경에서 사용시 서버가 멈추므로 잘 사용하지은 않음.
+
+# 노드 내장 모듈
+```
+
+```
